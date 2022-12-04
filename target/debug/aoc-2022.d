@@ -1,1 +1,0 @@
-/Users/sathis.kumar/Desktop/Sathis/Code/aoc-2022/target/debug/aoc-2022: /Users/sathis.kumar/Desktop/Sathis/Code/aoc-2022/src/aoc/day1/mod.rs /Users/sathis.kumar/Desktop/Sathis/Code/aoc-2022/src/aoc/mod.rs /Users/sathis.kumar/Desktop/Sathis/Code/aoc-2022/src/main.rs

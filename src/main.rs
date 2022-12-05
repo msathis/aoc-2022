@@ -1,15 +1,17 @@
+extern crate core;
+
 mod aoc;
 
 use std::env;
 use std::fs;
 use aoc::day1::Problem1;
+use aoc::day2::Problem2;
 
 trait Problem {
-    fn new(input: &str) -> Self;
+    fn new(input: &str) -> Self where Self: Sized;
     fn solve_part_1(&self) -> String;
     fn solve_part_2(&self) -> String;
 }
-
 
 
 fn main() {
@@ -31,8 +33,9 @@ fn solve_problem(problem_number: u32) {
     let input = fs::read_to_string(format!("src/aoc/day{}/input.txt", problem_number))
         .expect("Failed to read input file");
 
-    let problem = match problem_number {
-        1 => Problem1::new(&input),
+    let problem: Box<dyn Problem> = match problem_number {
+        1 => Box::new(Problem1::new(&input)),
+        2 => Box::new(Problem2::new(&input)),
         // Add more cases here to solve more problems...
         _ => panic!("Invalid problem number"),
     };

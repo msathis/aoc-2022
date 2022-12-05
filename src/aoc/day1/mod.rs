@@ -6,7 +6,7 @@ pub struct Problem1 {
 }
 
 impl Problem for Problem1 {
-    fn new(input: &str) -> Self {
+    fn new(input: &str) ->  Self {
         let elves: Vec<Vec<u32>> = input
             .lines()
             .map(|line| line.parse().ok())
@@ -31,7 +31,7 @@ impl Problem for Problem1 {
     }
 
     fn solve_part_2(&self) -> String {
-        let mut sums: Vec<u32> = self.elves
+        let sums: Vec<u32> = self.elves
             .iter()
             .map(|group| group.iter().sum())
             .collect();

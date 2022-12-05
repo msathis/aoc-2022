@@ -6,6 +6,7 @@ use std::env;
 use std::fs;
 use aoc::day1::Problem1;
 use aoc::day2::Problem2;
+use aoc::day3::Problem3;
 
 trait Problem {
     fn new(input: &str) -> Self where Self: Sized;
@@ -36,6 +37,7 @@ fn solve_problem(problem_number: u32) {
     let problem: Box<dyn Problem> = match problem_number {
         1 => Box::new(Problem1::new(&input)),
         2 => Box::new(Problem2::new(&input)),
+        3 => Box::new(Problem3::new(&input)),
         // Add more cases here to solve more problems...
         _ => panic!("Invalid problem number"),
     };

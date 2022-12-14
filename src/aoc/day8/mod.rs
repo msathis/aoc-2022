@@ -1,5 +1,4 @@
 use std::cmp::max;
-use std::collections::HashSet;
 use crate::Problem;
 
 pub struct Problem8 {

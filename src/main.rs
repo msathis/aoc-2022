@@ -8,6 +8,7 @@ use aoc::day1::Problem1;
 use aoc::day2::Problem2;
 use aoc::day3::Problem3;
 use aoc::day4::Problem4;
+use crate::aoc::day5::Problem5;
 
 trait Problem {
     fn new(input: &str) -> Self where Self: Sized;
@@ -40,6 +41,7 @@ fn solve_problem(problem_number: u32) {
         2 => Box::new(Problem2::new(&input)),
         3 => Box::new(Problem3::new(&input)),
         4 => Box::new(Problem4::new(&input)),
+        5 => Box::new(Problem5::new(&input)),
         // Add more cases here to solve more problems...
         _ => panic!("Invalid problem number"),
     };

@@ -8,6 +8,7 @@ use aoc::day1::Problem1;
 use aoc::day2::Problem2;
 use aoc::day3::Problem3;
 use aoc::day4::Problem4;
+use crate::aoc::day10::Problem10;
 use crate::aoc::day5::Problem5;
 use crate::aoc::day6::Problem6;
 use crate::aoc::day7::Problem7;
@@ -50,6 +51,7 @@ fn solve_problem(problem_number: u32) {
         7 => Box::new(Problem7::new(&input)),
         8 => Box::new(Problem8::new(&input)),
         9 => Box::new(Problem9::new(&input)),
+        10 => Box::new(Problem10::new(&input)),
         // Add more cases here to solve more problems...
         _ => panic!("Invalid problem number"),
     };
